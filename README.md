@@ -1,4 +1,4 @@
-## membersテーブル
+## users_groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -9,7 +9,7 @@
 - belongs_to :group
 - belongs_to :user
 
-## usersテーブル
+## usersテーブル(gemのdeviseで実装)
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, foregin_key: true|
@@ -35,7 +35,7 @@
 ## messeagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|text|text||
 |image|string||
 |group_id|integer|null: false, foregin_key: true|
 |user_id|integer|null: false, foregin_key: true|
