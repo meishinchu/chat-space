@@ -1,0 +1,53 @@
+%header
+.chat-info
+  .chat-info__group
+    %p.chat-info__group__name
+      グループ１
+    %p.chat-info__group__member
+      Member : mei
+  .chat-info__edit
+    %a
+      %p.chat-info__edit__text
+        Edit
+.chat-main
+  .chat-main__message
+    %p.chat-main__message__member
+      mei
+    %p.chat-main__message__day
+      2017/07/22 12:00:00
+  %p.chat-main__text
+    hello!!
+  .chat-main__message
+    %p.chat-main__message__member
+      mei
+    %p.chat-main__message__day
+      2017/07/22 12:00:00
+  %p.chat-main__text
+    hello!!
+.chat-form
+  .chat-form__input
+    %form
+      %input{"class":"chat-form__input__text", "type":"text", "placeholder":"type a message"}
+      .chat-form__input__icon
+        %label{"class":"chat-form__input__icon__image", "for":"image_file"}
+          %i{"class":"fa fa-picture-o", "aria-hidden":"true"}
+          %input{"class":"hidden js-file", "type":"file", "name":"image[file]", "id":"image_file", "style":"display:none;"}
+      %input{"class":"chat-form__input__button", "type":"button", "value":"Send"}
+.user-info
+  %p.user-info__name
+    mei
+  .user-info__icon
+    %a{"class":"chat-info__icon__pencil", "href":"#"}
+      %i{"class":"fa fa-pencil-square-o",  "aria-hidden":"true"}
+    %a{"class":"chat-info__icon__cog", "href":"#"}
+      %i{"class":"fa fa-cog",  "aria-hidden":"true"}
+.group-info
+  %p.group-info__name
+    グループ１
+  %p.group-info__message
+    testtest
+  %p.group-info__name
+    グループ２
+  %p.group-info__message
+    testtest
+%footer

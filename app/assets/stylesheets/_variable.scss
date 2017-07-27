@@ -1,0 +1,11 @@
+// 複数回使用する色は、変数を定義する用のファイルを作成して、そのファイルに定義してください。
+// このようにする理由は、変数を定義するファイルを読み込んでおくことで、その他のスタイルシートでも定義した変数を使用することができるからです。
+
+$color-side-text:#FFFFFF;
+$color-main-text:#434A54;
+$color-main-day:#999999;
+$color-main-buton:#38AEF0;
+
+$fontsize-name:16px;
+$fontsize-day:12px;
+
