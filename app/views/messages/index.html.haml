@@ -1,0 +1,75 @@
+%header
+.chat-info
+  .chat-info__group
+    %p.chat-info__group__name
+      グループ１
+    %p.chat-info__group__member
+      Member : mei
+  .chat-info__edit
+    %a
+      %p.chat-info__edit__text
+        Edit
+.chat-main
+  .chat-main__message
+    %p.chat-main__message__member
+      mei
+    %p.chat-main__message__day
+      2017/07/22 12:00:00
+  %p.chat-main__text
+    hello!!
+  .chat-main__message
+    %p.chat-main__message__member
+      mei
+    %p.chat-main__message__day
+      2017/07/22 12:00:00
+  %p.chat-main__text
+    hello!!
+  .chat-main__message
+    %p.chat-main__message__member
+      mei
+    %p.chat-main__message__day
+      2017/07/22 12:00:00
+  %p.chat-main__text
+    testtesttesttesttesttesttesttesttesttesttesttest
+    testtesttesttesttesttesttesttesttesttesttesttest
+    testtesttesttesttesttesttesttesttesttesttesttest
+    testtesttesttesttesttesttesttesttesttesttesttest
+    testtesttesttesttesttesttesttesttesttesttesttest
+    testtesttesttesttesttesttesttesttesttesttesttest
+  .chat-main__message
+    %p.chat-main__message__member
+      mei
+    %p.chat-main__message__day
+      2017/07/22 12:00:00
+  %p.chat-main__text
+    testtesttesttesttesttesttesttesttesttesttesttest
+    testtesttesttesttesttesttesttesttesttesttesttest
+    testtesttesttesttesttesttesttesttesttesttesttest
+    testtesttesttesttesttesttesttesttesttesttesttest
+    testtesttesttesttesttesttesttesttesttesttesttest
+    testtesttesttesttesttesttesttesttesttesttesttest
+  .chat-main__message
+    %p.chat-main__message__member
+      mei
+    %p.chat-main__message__day
+      2017/07/22 12:00:00
+  %p.chat-main__text
+    testtesttesttesttesttesttesttesttesttesttesttest
+    testtesttesttesttesttesttesttesttesttesttesttest
+    testtesttesttesttesttesttesttesttesttesttesttest
+    testtesttesttesttesttesttesttesttesttesttesttest
+    testtesttesttesttesttesttesttesttesttesttesttest
+    testtesttesttesttesttesttesttesttesttesttesttest
+.chat-form
+  .chat-form__input
+    %form
+      %input{"class":"chat-form__input__text", "type":"text", "placeholder":"type a message"}
+      .chat-form__input__icon
+        %label{"class":"chat-form__input__icon__image", "for":"image_file"}
+          %i{"class":"fa fa-picture-o", "aria-hidden":"true"}
+          %input{"class":"hidden js-file", "type":"file", "name":"image[file]", "id":"image_file", "style":"display:none;"}
+      %input{"class":"chat-form__input__button", "type":"button", "value":"Send"}
+
+=render 'messages/sidebar'
+
+%footer
