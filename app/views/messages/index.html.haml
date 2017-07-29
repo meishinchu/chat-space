@@ -69,14 +69,9 @@
           %i{"class":"fa fa-picture-o", "aria-hidden":"true"}
           %input{"class":"hidden js-file", "type":"file", "name":"image[file]", "id":"image_file", "style":"display:none;"}
       %input{"class":"chat-form__input__button", "type":"button", "value":"Send"}
-.user-info
-  %p.user-info__name
-    mei
-  .user-info__icon
-    %a{"class":"user-info__icon__pencil", "href":"#"}
-      %i{"class":"fa fa-pencil-square-o",  "aria-hidden":"true"}
-    %a{"class":"user-info__icon__cog", "href":"#"}
-      %i{"class":"fa fa-cog",  "aria-hidden":"true"}
+
+=render 'messages/user-info'
+
 .group-info
   %p.group-info__name
     グループ１
