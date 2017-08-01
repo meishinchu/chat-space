@@ -4,7 +4,13 @@ class UsersController < ApplicationController
   end
 
   def update
-    current_user.update(user_params)
+    # binding.pry
+    if current_user.name == params[:user][:name] && current_user.email == params[:user][:email]
+      redirect_to "edit"
+    else
+      current_user.update(user_params)
+      redirect_to "/"
+    end
   end
 
   private
