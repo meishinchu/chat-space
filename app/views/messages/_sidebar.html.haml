@@ -2,11 +2,10 @@
   %p.user-info__name
     =current_user.name
   .user-info__icon
-    %a{"class":"user-info__icon__pencil", "href":"#"}
+    = link_to "#", class: "user-info__icon__pencil" do
       %i{"class":"fa fa-pencil-square-o",  "aria-hidden":"true"}
     = link_to "users/:id/edit", class: "user-info__icon__cog" do
       %i{"class":"fa fa-cog",  "aria-hidden":"true"}
-
 .group-info
   %p.group-info__name
     グループ１
