@@ -6,8 +6,6 @@ body {
 }
 
 header {
-  background-color: $color-main-buton;
-  height: 25px;
 }
 
 .chat-info {
@@ -153,6 +151,7 @@ header {
     }
 
     &__cog {
+      margin-left: 5px;
       .fa {
         color: $color-side-text;
       }
