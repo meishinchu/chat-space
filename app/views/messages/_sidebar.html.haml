@@ -2,7 +2,7 @@
   %p.user-info__name
     =current_user.name
   .user-info__icon
-    = link_to "#", class: "user-info__icon__pencil" do
+    = link_to new_group_path, class: "user-info__icon__pencil" do
       %i{"class":"fa fa-pencil-square-o",  "aria-hidden":"true"}
     = link_to edit_user_path(current_user.id), class: "user-info__icon__cog" do
       %i{"class":"fa fa-cog",  "aria-hidden":"true"}
