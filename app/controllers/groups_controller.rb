@@ -5,13 +5,17 @@ class GroupsController < ApplicationController
   end
 
   def create
-    if Group.create(group_params)
+    @group = Group.new(group_params)
+    if @group.save
       flash.now[:notice] = "グループを作成しました"
       render "messages/index.html.haml"
     else
-      flash.now[:alert] = "グループ名を入力してください"
       render :new
     end
+  end
+
+  def edit
+    @group = Group.find(params[:id])
   end
 
   def group_params
