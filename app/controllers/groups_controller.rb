@@ -8,7 +8,7 @@ class GroupsController < ApplicationController
     @group = Group.new(group_params)
     if @group.save
       flash.now[:notice] = "グループを作成しました"
-      render "messages/index.html.haml"
+      redirect_to controller: 'messages', action: 'index'
     else
       render :new
     end
