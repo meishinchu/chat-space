@@ -164,6 +164,7 @@ header {
   width: calc(300px - 40px);
   height: calc(100vh - 96px);
   padding: 0 20px 0 20px;
+  overflow: auto;
 
   &__name {
     font-size: 15px;
