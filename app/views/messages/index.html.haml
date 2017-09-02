@@ -6,9 +6,7 @@
     %p.chat-info__group__member
       Member : mei
   .chat-info__edit
-    %a
-      %p.chat-info__edit__text
-        Edit
+    = link_to "Edit", root_path, class: "chat-info__edit__text"
 .chat-main
   .chat-main__message
     %p.chat-main__message__member

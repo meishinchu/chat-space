@@ -39,11 +39,14 @@ header {
     height: calc(42px - 2px);
     width: calc(75px - 2px);
     float: right;
+    line-height: 40px;
     margin: 28px 0 28px 0;
 
     &__text {
       color: $color-main-buton;
       padding: 8px 20px 8px 20px;
+      text-align: center;
+      text-decoration: none;
     }
   }
 }

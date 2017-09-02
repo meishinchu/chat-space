@@ -1,5 +1,8 @@
 class GroupsController < ApplicationController
 
+  def index
+  end
+
   def new
     @group = Group.new
   end
@@ -14,11 +17,21 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    @group = Group.find(params[:id])
+    find_group_params
+  end
+
+  def update
+    find_group_params
+    @group.update(group_params)
+    redirect_to root_path, notice: 'グループを編集しました'
   end
 
   private
   def group_params
     params.require(:group).permit(:name, { :user_ids => [] })
+  end
+
+  def find_group_params
+    @group = Group.find(params[:id])
   end
 end
