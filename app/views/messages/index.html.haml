@@ -60,13 +60,13 @@
     testtesttesttesttesttesttesttesttesttesttesttest
 .chat-form
   .chat-form__input
-    %form
-      %input{"class":"chat-form__input__text", "type":"text", "placeholder":"type a message"}
+    = form_for [@group, @message] do |f|
+      = f.text_field :text, placeholder: "type a message", class: 'chat-form__input__text'
       .chat-form__input__icon
-        %label{"class":"chat-form__input__icon__image", "for":"image_file"}
+        = f.label :image, class: 'chat-form__input__icon__image', for: "image_file" do
           %i{"class":"fa fa-picture-o", "aria-hidden":"true"}
-          %input{"class":"hidden js-file", "type":"file", "name":"image[file]", "id":"image_file", "style":"display:none;"}
-      %input{"class":"chat-form__input__button", "type":"button", "value":"Send"}
+          = f.file_field :image, class: 'hidden js-file', id: 'image_file', style: "display:none;"
+      = f.button "Send", class: "chat-form__input__button"
 
 =render 'messages/sidebar'
 
