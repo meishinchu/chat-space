@@ -10,7 +10,7 @@ class Group < ApplicationRecord
     if messages.blank?
       "まだメッセージはありません。"
     else
-      self.messages.last.text
+      messages.last.text
     end
   end
 end
