@@ -78,9 +78,17 @@ header {
   }
 
   &__text {
-    font-size: 14px;
-    color:$color-main-text;
     padding: 0 0 40px 0;
+
+    &__word {
+      font-size: 14px;
+      color:$color-main-text;
+      padding: 0 0 15px 0;
+    }
+
+    &__image {
+      display: block;
+    }
   }
 }
 
