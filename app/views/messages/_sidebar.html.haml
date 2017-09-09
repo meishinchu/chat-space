@@ -8,10 +8,11 @@
       %i{"class":"fa fa-cog",  "aria-hidden":"true"}
 .group-info
   - current_user.groups.each do |group|
-    %p.group-info__name
-      #{group.name}
-    %p.group-info__message
-      - if group.messages.blank?
-        まだメッセージはありません。
-      - else
-        = group.messages.last.text
+    = link_to group_messages_path(group.id), class: "group-info__link" do
+      %p.group-info__link__name
+        #{group.name}
+      %p.group-info__link__message
+        - if group.messages.blank?
+          まだメッセージはありません。
+        - else
+          = group.messages.last.text
