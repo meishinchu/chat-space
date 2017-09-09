@@ -11,4 +11,7 @@
     %p.group-info__name
       #{group.name}
     %p.group-info__message
-      まだメッセージはありません。
+      - if group.messages.blank?
+        まだメッセージはありません。
+      - else
+        = group.messages.last.text
