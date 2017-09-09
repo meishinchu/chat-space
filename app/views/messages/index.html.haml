@@ -9,18 +9,7 @@
         #{user.name}
   .chat-info__edit
     = link_to "Edit", edit_group_path(@group.id), class: "chat-info__edit__text"
-.chat-main
-  - @messages.each do |message|
-    .chat-main__message
-      %p.chat-main__message__member
-        = message.user.name
-      %p.chat-main__message__day
-        = message.created_at.try(:strftime,"%Y/%m/%d %H:%M")
-    .chat-main__text
-      %p.chat-main__text__word
-        = message.text
-      - if message.image?
-        = image_tag message.image.thumb.url, class: "chat-main__image"
+= render partial: 'message'
 .chat-form
   .chat-form__input
     = form_for [@group, @message] do |f|
