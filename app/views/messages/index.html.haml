@@ -2,62 +2,14 @@
 .chat-info
   .chat-info__group
     %p.chat-info__group__name
-      グループ１
-    %p.chat-info__group__member
-      Member : mei
+      = @group.name
+    - @group.users.each do |user|
+      %p.chat-info__group__member
+        Member :
+        #{user.name}
   .chat-info__edit
-    = link_to "Edit", root_path, class: "chat-info__edit__text"
-.chat-main
-  .chat-main__message
-    %p.chat-main__message__member
-      mei
-    %p.chat-main__message__day
-      2017/07/22 12:00:00
-  %p.chat-main__text
-    hello!!
-  .chat-main__message
-    %p.chat-main__message__member
-      mei
-    %p.chat-main__message__day
-      2017/07/22 12:00:00
-  %p.chat-main__text
-    hello!!
-  .chat-main__message
-    %p.chat-main__message__member
-      mei
-    %p.chat-main__message__day
-      2017/07/22 12:00:00
-  %p.chat-main__text
-    testtesttesttesttesttesttesttesttesttesttesttest
-    testtesttesttesttesttesttesttesttesttesttesttest
-    testtesttesttesttesttesttesttesttesttesttesttest
-    testtesttesttesttesttesttesttesttesttesttesttest
-    testtesttesttesttesttesttesttesttesttesttesttest
-    testtesttesttesttesttesttesttesttesttesttesttest
-  .chat-main__message
-    %p.chat-main__message__member
-      mei
-    %p.chat-main__message__day
-      2017/07/22 12:00:00
-  %p.chat-main__text
-    testtesttesttesttesttesttesttesttesttesttesttest
-    testtesttesttesttesttesttesttesttesttesttesttest
-    testtesttesttesttesttesttesttesttesttesttesttest
-    testtesttesttesttesttesttesttesttesttesttesttest
-    testtesttesttesttesttesttesttesttesttesttesttest
-    testtesttesttesttesttesttesttesttesttesttesttest
-  .chat-main__message
-    %p.chat-main__message__member
-      mei
-    %p.chat-main__message__day
-      2017/07/22 12:00:00
-  %p.chat-main__text
-    testtesttesttesttesttesttesttesttesttesttesttest
-    testtesttesttesttesttesttesttesttesttesttesttest
-    testtesttesttesttesttesttesttesttesttesttesttest
-    testtesttesttesttesttesttesttesttesttesttesttest
-    testtesttesttesttesttesttesttesttesttesttesttest
-    testtesttesttesttesttesttesttesttesttesttesttest
+    = link_to "Edit", edit_group_path(@group.id), class: "chat-info__edit__text"
+= render partial: 'message'
 .chat-form
   .chat-form__input
     = form_for [@group, @message] do |f|

@@ -78,9 +78,17 @@ header {
   }
 
   &__text {
-    font-size: 14px;
-    color:$color-main-text;
     padding: 0 0 40px 0;
+
+    &__word {
+      font-size: 14px;
+      color:$color-main-text;
+      padding: 0 0 15px 0;
+    }
+
+    &__image {
+      display: block;
+    }
   }
 }
 
@@ -170,18 +178,21 @@ header {
   padding: 0 20px 0 20px;
   overflow: auto;
 
-  &__name {
-    font-size: 15px;
-    color: $color-side-text;
-    padding: 20px 0 0 0;
-  }
+  &__link {
+    text-decoration: none;
 
-  &__message {
-    font-size: 11px;
-    color: $color-side-text;
-    padding: 5px 0 20px 0;
-  }
+    &__name {
+      font-size: 15px;
+      color: $color-side-text;
+      padding: 20px 0 0 0;
+    }
 
+    &__message {
+      font-size: 11px;
+      color: $color-side-text;
+      padding: 5px 0 20px 0;
+    }
+  }
 }
 
 footer {

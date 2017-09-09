@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   before_action :set_group, only: [:index, :create]
 
   def index
-    @message = @group.messages.build
+    @message = Message.new
   end
 
   def create
@@ -18,6 +18,7 @@ class MessagesController < ApplicationController
   private
   def set_group
     @group = Group.find(params[:group_id])
+    @messages = @group.messages
   end
 
   def message_params
