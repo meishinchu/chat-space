@@ -8,7 +8,7 @@
         Member :
         #{user.name}
   .chat-info__edit
-    = link_to "Edit", root_path, class: "chat-info__edit__text"
+    = link_to "Edit", edit_group_path(@group.id), class: "chat-info__edit__text"
 .chat-main
   - @messages.each do |messages|
     .chat-main__message
