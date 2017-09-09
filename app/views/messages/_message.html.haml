@@ -4,7 +4,7 @@
       %p.chat-main__message__member
         = message.user.name
       %p.chat-main__message__day
-        = message.created_at.try(:strftime,"%Y/%m/%d %H:%M")
+        = message.created_at.in_time_zone('Tokyo').to_s(:ymd)
     .chat-main__text
       %p.chat-main__text__word
         = message.text
