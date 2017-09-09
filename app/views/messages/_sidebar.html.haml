@@ -12,7 +12,4 @@
       %p.group-info__link__name
         #{group.name}
       %p.group-info__link__message
-        - if group.messages.blank?
-          まだメッセージはありません。
-        - else
-          = group.messages.last.text
+        = group.get_lastest_message
