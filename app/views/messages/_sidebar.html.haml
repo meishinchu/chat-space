@@ -10,6 +10,6 @@
   - current_user.groups.each do |group|
     = link_to group_messages_path(group.id), class: "group-info__link" do
       %p.group-info__link__name
-        #{group.name}
+        = group.name
       %p.group-info__link__message
         = group.get_lastest_message
