@@ -7,7 +7,7 @@ class Group < ApplicationRecord
   validates :name, presence: true
 
   def get_lastest_message
-    if self.messages.blank?
+    if messages.blank?
       "まだメッセージはありません。"
     else
       self.messages.last.text
