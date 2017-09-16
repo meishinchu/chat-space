@@ -24,5 +24,11 @@ describe Message do
       expect(message.errors[:text_or_image][0]).to include("入力してください")
     end
 
+    it "is invalid without a group_id" do
+      message = build(:message, group_id: "")
+      message.valid?
+      expect(message.errors[:group][0]).to include("入力してください")
+    end
+
   end
 end
