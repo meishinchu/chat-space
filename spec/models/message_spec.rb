@@ -13,5 +13,10 @@ describe Message do
       expect(message).to be_valid
     end
 
+    it "is valid with a text and image" do
+      message = build(:message)
+      expect(message).to be_valid
+    end
+
   end
 end
