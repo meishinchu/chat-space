@@ -30,7 +30,9 @@ describe MessagesController, type: :controller do
     end
 
     context "logout user" do
-      it "renders the :index templat" do
+      it "redirect to new_user_session_path" do
+        get :index, params: { group_id: group }
+        expect(response).to redirect_to new_user_session_path
       end
     end
   end
