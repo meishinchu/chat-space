@@ -60,6 +60,11 @@ describe MessagesController, type: :controller do
           post :create, params: { message: error_message, group_id: group.id }
         }.not_to change(Message, :count)
       end
+
+      it "not save the message and renders the :index template" do
+        post :create, params: { message: error_message, group_id: group.id }
+        expect(response).to render_template :index
+      end
     end
   end
 
