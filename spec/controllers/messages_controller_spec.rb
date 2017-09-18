@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe MessagesController, type: :controller do
-  let(:user) { build(:user) }
+  let(:user) { create(:user) }
   let(:group) { create(:group) }
   let(:messages) { create_list(:message, 2, user: user, group: group) }
 
@@ -33,6 +33,20 @@ describe MessagesController, type: :controller do
       it "redirect to new_user_session_path" do
         get :index, params: { group_id: group }
         expect(response).to redirect_to new_user_session_path
+      end
+    end
+  end
+
+  describe 'POST #create' do
+    context "login user" do
+      before do
+        login_user user
+      end
+
+      it "save the message in the database" do
+        expect{
+          post :create, params: { message: attributes_for(:message), group_id: group.id }
+        }.to change(Message, :count).by(1)
       end
     end
   end
