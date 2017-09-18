@@ -66,6 +66,13 @@ describe MessagesController, type: :controller do
         expect(response).to render_template :index
       end
     end
+
+    context "logout user" do
+      it "redirect to new_user_session_path" do
+        post :create, params: { message: error_message, group_id: group.id }
+        expect(response).to redirect_to new_user_session_path
+      end
+    end
   end
 
 end
