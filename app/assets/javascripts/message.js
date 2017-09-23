@@ -32,7 +32,6 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      console.log(html);
       $('.chat-main').append(html);
       $('.chat-form__input__text').val('');
       $('.chat-main').animate({scrollTop:$('.chat-main')[0].scrollHeight});
