@@ -43,4 +43,9 @@ $(function() {
     $(this).parent().remove();
     appendHTMLuser(this);
   });
+
+  $(document).on("click", '.user-search-remove', function() {
+    $(this).parent().remove();
+    console.log(this);
+  });
 });
