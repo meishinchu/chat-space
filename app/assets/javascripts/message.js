@@ -1,31 +1,21 @@
 $(function(){
   function buildHTML(message){
+    var html_image = ""
     if(message.image){
-      var html = `<div class ="chat-main__message">
-                    <p class ="chat-main__message__member">
-                      ${message.name}
-                    </p>
-                    <p class ="chat-main__message__day">
-                      ${message.created_at}
-                    </p>
-                  <div class ="chat-main__text">
-                    <p class ="chat-main__text__word">
-                      ${message.text}
-                    </p>
-                      <img src="${message.image}" class ="chat-main__image">`
-    }else{
-      var html = `<div class ="chat-main__message">
-                    <p class ="chat-main__message__member">
-                      ${message.name}
-                    </p>
-                    <p class ="chat-main__message__day">
-                      ${message.created_at}
-                    </p>
-                  <div class ="chat-main__text">
-                    <p class ="chat-main__text__word">
-                      ${message.text}
-                    </p>`
+      html_image = `<img src="${message.image}" class ="chat-main__image">`
     }
+    var html = `<div class ="chat-main__message">
+                  <p class ="chat-main__message__member">
+                    ${message.name}
+                  </p>
+                  <p class ="chat-main__message__day">
+                    ${message.created_at}
+                  </p>
+                <div class ="chat-main__text">
+                  <p class ="chat-main__text__word">
+                    ${message.text}
+                  </p>
+                    ${html_image}`
     return html;
   }
   $('#new_message').on('submit', function(e){ 
