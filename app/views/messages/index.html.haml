@@ -3,9 +3,9 @@
   .chat-info__group
     %p.chat-info__group__name
       = @group.name
-    - @group.users.each do |user|
-      %p.chat-info__group__member
-        Member :
+    %p.chat-info__group__member
+      Member :
+      - @group.users.each do |user|
         #{user.name}
   .chat-info__edit
     = link_to "Edit", edit_group_path(@group.id), class: "chat-info__edit__text"
