@@ -50,7 +50,6 @@ $(function(){
 
   function update(){
     var message_id = $('.chat-main__message').last().data('message-id');
-    console.log(message_id);
     $.ajax({
       url: location.href,
       type: 'GET',
