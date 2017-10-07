@@ -1,6 +1,6 @@
 .chat-main
   - @messages.each do |message|
-    .chat-main__message
+    .chat-main__message{'data-message-id': message.id}
       %p.chat-main__message__member
         = message.user.name
       %p.chat-main__message__day
